@@ -90,8 +90,7 @@ MACROS_SOURCES = [
 # provides. This setting specifies file paths to look through for local
 # versions of their XML. See also XML_REPO below, which is effectively tacked
 # on to the end of this list
-LOCAL_XML_PATHS = [os.path.join(BASE_DIR, "CFR-2019-title-42")]
-
+LOCAL_XML_PATHS = []
 
 # Sometimes appendices provide examples or model forms that include
 # labels that we would otherwise recognize as structural to the appendix
@@ -105,8 +104,9 @@ XML_REPO_PREFIX = 'https://raw.githubusercontent.com/eregs/fr-notices/master/'
 # A dictionary of agency-specific external citations
 # @todo - move ATF citations to an extension
 CUSTOM_CITATIONS = {
-    "ATF I 5300.1": "https://atf-eregs.apps.cloud.gov/static/atf_eregs/5300_1.pdf",
-    "ATF I 5300.2": "https://www.atf.gov/file/58806/download"}
+    #"ATF I 5300.1": "https://atf-eregs.apps.cloud.gov/static/atf_eregs/5300_1.pdf",
+    #"ATF I 5300.2": "https://www.atf.gov/file/58806/download"
+    }
 
 # Regulations.gov settings. The demo key is rate limited by IP; sign up for
 # your own key at
@@ -124,7 +124,7 @@ CANONICAL_PORT = ""
 
 # The URL for the regulations-site API that parser commands invoked from the
 # web API/UI should run against:
-EREGS_SITE_API_URL = "http://localhost:1234/api/"
+EREGS_SITE_API_URL = "http://localhost:8000/api/"
 
 try:
     from local_settings import *
