@@ -27,6 +27,7 @@ def pipeline(ctx, cfr_title, cfr_part, output, only_latest):
     * uri (the base url of an instance of regulations-core)
     * a directory prefixed with "git://". This will export to a git
       repository"""
+    print("RUNNING PIPELINE")
     params = {'cfr_title': cfr_title, 'cfr_part': cfr_part}
     if only_latest:
         ctx.invoke(annual_version, **params)

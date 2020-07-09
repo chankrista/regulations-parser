@@ -104,6 +104,7 @@ class Volume(namedtuple('Volume', ['year', 'title', 'vol_num'])):
             xml_path = os.path.join(xml_path, 'annual', filename)
             logger.debug("Checking locally for file %s", xml_path)
             if os.path.isfile(xml_path):
+                print("FILE FOUND")
                 with open(xml_path, 'rb') as f:
                     return XMLWrapper(f.read(), xml_path)
 

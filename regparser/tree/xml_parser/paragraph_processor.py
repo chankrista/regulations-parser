@@ -39,7 +39,7 @@ class ParagraphProcessor(object):
         """Derive a flat list of nodes from this xml chunk. This does nothing
         to determine node depth"""
         nodes = []
-
+        print(e.tree.tounicode(xml))
         for child in xml.getchildren():
             matching = (m for m in self.MATCHERS if m.matches(child))
 
